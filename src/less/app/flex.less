@@ -1,0 +1,25 @@
+@import '../base.less';
+
+#flex-container {
+  width: 100%;
+  font-family: Consolas, Arial, sans-serif;
+  .flexbox();
+  .flex-direction(row);
+
+  .flex-item {
+    .flex(auto);
+  }
+
+  .raw-item {
+    width: 5rem;
+  }
+
+  > div {
+    border: 1px solid #f00;
+    padding: 1rem;
+  }
+
+  > .raw-item {
+    border: 1px solid #000;
+  }
+}

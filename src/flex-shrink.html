@@ -1,0 +1,32 @@
+@% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ flex-shrink 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/flex-shrink.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ flex-shrink @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:9}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>flex-shrink</h2>
+        <h4>弹性盒子收缩</h4>
+        <p>flex-shrink属性设置了收缩因数，不接受负值。默认为1，即如果空间不足，该项目将缩小。</p>
+        <p>the width of content is 500px, flex-basic of flex item is 120px.</p>
+        <p>A, B, C are flex-shrink:1. D and E are flex-shrink:2</p>
+        <p>the width of D is not the same as A's</p>
+        <div id="content">
+            <div class="box" style="background-color:red;">A</div>
+            <div class="box" style="background-color:lightblue;">B</div>
+            <div class="box" style="background-color:yellow;">C</div>
+            <div class="box1" style="background-color:brown;">D</div>
+            <div class="box1" style="background-color:lightgreen;">E</div>
+        </div>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@ @% }) %@

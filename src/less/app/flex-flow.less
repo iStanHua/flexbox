@@ -1,0 +1,34 @@
+@import '../base.less';
+
+.demo-box {
+  flex-wrap: wrap;
+
+  .demo {
+    width: 100%;
+  }
+}
+
+.flow {
+  width: 80%;
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  display: -webkit-flex;
+  -webkit-flex-flow: column-reverse wrap-reverse;
+  display: flex;
+  flex-flow: grow;
+}
+
+.flow1 {
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+
+.flow2 {
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+}

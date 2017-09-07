@@ -1,0 +1,47 @@
+ @% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ justify-content 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/justify-content.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ justify-content @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:11}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>justify-content (适用于父类容器上)</h2>
+        <h4>弹性盒子对齐方式</h4>
+        <p>justify-content定义了项目在主轴上的对齐方式，但请注意：justify-content只会在主轴项目仍具有剩余空间时才会起作用。</p>
+        <p>flex-start（默认值）：左对齐</p>
+        <p>flex-end：右对齐</p>
+        <p>center： 居中</p>
+        <p>space-between：两端对齐，项目之间的间隔都相等。</p>
+        <p>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</p>
+        <select id="justifyContent">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="space-between" selected>space-between</option>
+            <option value="space-around">space-around</option>
+        </select>
+        <div class="gridview" id="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@
+<script type="text/javascript">
+    var justifyContent = document.getElementById('justifyContent');
+    justifyContent.addEventListener('change', function (evt) {
+        document.getElementById('container').style.justifyContent = evt.target.value;
+    });
+
+</script>
+@% }) %@

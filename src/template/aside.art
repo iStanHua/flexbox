@@ -1,0 +1,21 @@
+<div class="sidenav">
+    <div class="nav">
+        <a class="item@% if(active==0) {%@ active @%}%@" href="index.html">首页</a>
+        <h2>弹性容器属性</h2>
+        <a class="item@% if(active==6) {%@ active @%}%@" href="flex-direction.html">flex-direction</a>
+        <a class="item@% if(active==10) {%@ active @%}%@" href="flex-wrap.html">flex-wrap</a>
+        <a class="item@% if(active==7) {%@ active @%}%@" href="flex-flow.html">flex-flow</a>
+        <a class="item@% if(active==11) {%@ active @%}%@" href="justify-content.html">justify-content</a>
+        <a class="item@% if(active==2) {%@ active @%}%@" href="align-items.html">align-items</a>
+        <a class="item@% if(active==1) {%@ active @%}%@" href="align-content.html">align-content</a>
+        <h2>弹性元素属性</h2>
+        <a class="item@% if(active==12) {%@ active @%}%@" href="order.html">order</a>
+        <a class="item@% if(active==3) {%@ active @%}%@" href="align-self.html">align-self</a>
+        <a class="item@% if(active==8) {%@ active @%}%@" href="flex-grow.html">flex-grow</a>
+        <a class="item@% if(active==9) {%@ active @%}%@" href="flex-shrink.html">flex-shrink</a>
+        <a class="item@% if(active==4) {%@ active @%}%@" href="flex.html">flex</a>
+        <a class="item@% if(active==5) {%@ active @%}%@" href="flex-basis.html">flex-basis</a>
+        <h2>弹性布局实例</h2>
+        <a class="item@% if(active==13) {%@ active @%}%@" href="examples/index.html">实例1</a>
+    </div>
+</div>

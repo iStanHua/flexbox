@@ -1,0 +1,28 @@
+@% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ order 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/order.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ order @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:12}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>order</h2>
+        <h4>弹性盒子顺序</h4>
+        <p>order属性定义项目在主轴上的排列顺序。数值越小，排列越靠前，默认值为0。</p>
+        <div class="svg-img"><img src="images/order.svg" /></div>
+        <div id="mainorder">
+            <div class="articleorder">article(order: 2)</div>
+            <div class="navorder">nav(order: 1)</div>
+            <div class="asideorder">aside(order: 3)</div>
+        </div>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@ @% }) %@

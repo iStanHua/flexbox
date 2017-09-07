@@ -1,0 +1,56 @@
+@% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ align-items 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/align-items.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ align-items @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:2}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>align-items</h2>
+        <h4>弹性元素对齐</h4>
+        <p>align-items属性设置弹性盒子的所有子元素的对齐方式，包括匿名弹性元素。元素可以通过单独设置“align-self”来覆盖该属性。</p>
+        <div class="svg-img"><img src="images/align-items.svg" /></div>
+        <p>flex-start：交叉轴的起点对齐。</p>
+        <p>flex-end：交叉轴的终点对齐。</p>
+        <p>center：交叉轴的中点对齐。</p>
+        <p>baseline: 项目的第一行文字的基线对齐。</p>
+        <p>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</p>
+        <div id="container" class="flex">
+            <div id="item1">1</div>
+            <div id="item2">2</div>
+            <div id="item3">3</div>
+            <div id="item4">4</div>
+            <div id="item5">5</div>
+            <div id="item6">6</div>
+        </div>
+        <div class="row">
+            <label for="values">align-items: </label>
+            <select id="values">
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center" selected>center</option>
+                <option value="baseline">baseline</option>
+                <option value="stretch">stretch</option>
+            </select>
+        </div>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@
+<script type="text/javascript">
+    var values = document.getElementById('values');
+    var container = document.getElementById('container');
+
+    values.addEventListener('change', function (evt) {
+        container.style.alignItems = evt.target.value;
+    });
+
+</script>
+@% }) %@

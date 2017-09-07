@@ -1,0 +1,34 @@
+@% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ flex 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/flex.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ flex @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:4}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>flex</h2>
+        <p>flex属性设置了弹性盒子长度的组成，包括增长因数、收缩因数和伸缩基准值。对于一个弹性元素，“flex”属性会被用来设置元素的尺寸，对于一个非弹性元素，该属性无效。</p>
+        <div id="flex-container">
+            <div class="flex-item" id="flex">Flex box (click to toggle row box)</div>
+            <div class="raw-item" id="raw">Row box</div>
+        </div>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@
+<script type="text/javascript">
+    var flex = document.getElementById("flex");
+    var raw = document.getElementById("raw");
+    flex.addEventListener("click", function () {
+        raw.style.display = raw.style.display == "none" ? "block" : "none";
+    });
+
+</script>
+@% }) %@

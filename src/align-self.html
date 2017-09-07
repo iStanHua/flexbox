@@ -1,0 +1,31 @@
+@% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ align-self 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/align-self.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ align-self @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:3}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>align-self</h2>
+        <h4>弹性元素自对齐</h4>
+        <p>align-self属性定义了单个项目上在交叉轴的对齐方式。功能与“align-items”相同。可以覆盖“align-items”属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</p>
+        <div class="svg-img"><img src="images/align-self.svg" /></div>
+        <div id="container" class="flex">
+            <div id="item1">flex-start</div>
+            <div id="item2">flex-end</div>
+            <div id="item3">center</div>
+            <div id="item4">baseline</div>
+            <div id="item5">stretch</div>
+            <div id="item6">auto</div>
+        </div>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@ @% }) %@

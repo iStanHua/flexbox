@@ -1,0 +1,56 @@
+@% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ align-content 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/align-content.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ align-content @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:1}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>align-content</h2>
+        <h4>弹性元素内容对齐</h4>
+        <p>align-content属性设置了容器内每行沿侧轴的对齐方式。与“justify-content”属性在主轴方向对齐单独元素的方式相似。如果容器内只有一行，该属性无效。</p>
+        <div class="svg-img"><img src="images/align-content.svg" /></div>
+        <p>flex-start：与交叉轴的起点对齐。</p>
+        <p>flex-end：与交叉轴的终点对齐。</p>
+        <p>center：与交叉轴的中点对齐。</p>
+        <p>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</p>
+        <p>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</p>
+        <p>stretch（默认值）：轴线占满整个交叉轴。</p>
+        <div id="container" class="flex">
+            <div id="item1">1</div>
+            <div id="item2">2</div>
+            <div id="item3">3</div>
+            <div id="item4">4</div>
+            <div id="item5">5</div>
+            <div id="item6">6</div>
+        </div>
+        <div class="row">
+            <label for="values">align-content: </label>
+            <select id="contentAlignment">
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end" selected>flex-end</option>
+                <option value="center">center</option>
+                <option value="space-between">space-between</option>
+                <option value="space-around">space-around</option>
+                <option value="stretch">stretch</option>
+            </select>
+        </div>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@
+<script type="text/javascript">
+    var contentAlignment = document.getElementById("contentAlignment");
+    contentAlignment.addEventListener("change", function (evt) {
+        document.getElementById("container").style.alignContent = evt.target.value;
+    });
+
+</script>
+@% }) %@

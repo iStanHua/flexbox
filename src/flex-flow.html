@@ -1,0 +1,48 @@
+@% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ flex-flow 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/flex-flow.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ flex-flow @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:7}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>flex-flow</h2>
+        <h4>弹性盒子流</h4>
+        <p>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，可以同时定义主轴和侧轴。默认值为row nowrap。</p>
+        <div class="demo-box">
+            <div class="demo">
+                <h4><code>flex-flow:row nowrap</code></h4>
+                <div class="flow flow2">
+                    <div class="box" style="background-color:red;">A</div>
+                    <div class="box" style="background-color:lightblue;">B</div>
+                    <div class="box" style="background-color:yellow;">C</div>
+                </div>
+            </div>
+            <div class="demo">
+                <h4><code>flex-flow:column wrap</code></h4>
+                <div class="flow flow1">
+                    <div class="box" style="background-color:red;">A</div>
+                    <div class="box" style="background-color:lightblue;">B</div>
+                    <div class="box" style="background-color:yellow;">C</div>
+                </div>
+            </div>
+            <div class="demo">
+                <h4><code>flex-flow:column-reverse wrap-reverse</code></h4>
+                <div class="flow">
+                    <div class="box" style="background-color:red;">A</div>
+                    <div class="box" style="background-color:lightblue;">B</div>
+                    <div class="box" style="background-color:yellow;">C</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@ @% }) %@

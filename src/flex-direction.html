@@ -1,0 +1,61 @@
+@% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ flex-direction 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/flex-direction.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ flex-direction @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:6}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>flex-direction</h2>
+        <h4>弹性盒子方向</h4>
+        <p>flex-direction属性指定了内部元素是如何在 flex 容器中布局的，定义了主轴的方向(正方向或反方向)。</p>
+        <div class="svg-img"><img src="images/flex-direction.svg" /></div>
+        <p>row（默认值）：主轴为水平方向，起点在左端。</p>
+        <p>row-reverse：主轴为水平方向，起点在右端。</p>
+        <p>column：主轴为垂直方向，起点在上沿。</p>
+        <p>column-reverse：主轴为垂直方向，起点在下沿。</p>
+        <div class="demo-box">
+            <div class="demo">
+                <h4><code>flex-direction:row</code></h4>
+                <div class="direction direction3">
+                    <div class="box" style="background-color:red;">A</div>
+                    <div class="box" style="background-color:lightblue;">B</div>
+                    <div class="box" style="background-color:yellow;">C</div>
+                </div>
+            </div>
+            <div class="demo">
+                <h4><code>flex-direction:row-reverse</code></h4>
+                <div class="direction direction2">
+                    <div class="box" style="background-color:red;">A</div>
+                    <div class="box" style="background-color:lightblue;">B</div>
+                    <div class="box" style="background-color:yellow;">C</div>
+                </div>
+            </div>
+            <div class="demo">
+                <h4><code>flex-direction:column</code></h4>
+                <div class="direction direction1">
+                    <div class="box" style="background-color:red;">A</div>
+                    <div class="box" style="background-color:lightblue;">B</div>
+                    <div class="box" style="background-color:yellow;">C</div>
+                </div>
+            </div>
+            <div class="demo">
+                <h4><code>flex-direction:column-reverse</code></h4>
+                <div class="direction">
+                    <div class="box" style="background-color:red;">A</div>
+                    <div class="box" style="background-color:lightblue;">B</div>
+                    <div class="box" style="background-color:yellow;">C</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@ @% }) %@

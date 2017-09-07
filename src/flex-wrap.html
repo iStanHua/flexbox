@@ -1,0 +1,50 @@
+@% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ flex-wrap 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/flex-wrap.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ flex-wrap @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:10}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>flex-wrap</h2>
+        <h4>弹性盒子换行</h4>
+        <p>flex-wrap属性控制了容器为单行还是多行。并且定义了侧轴的方向，新行将沿侧轴方向堆砌。</p>
+        <div class="svg-img"><img src="images/flex-wrap.svg" /></div>
+        <p>nowrap（默认）：不换行。</p>
+        <p>wrap：换行，第一行在上方。</p>
+        <p>wrap-reverse：换行，第一行在下方。</p>
+        <div class="demo">
+            <h4><code>flex-wrap: wrap</code></h4>
+            <div class="wrap">
+                <div class="red">1</div>
+                <div class="green">2</div>
+                <div class="blue">3</div>
+            </div>
+        </div>
+        <div class="demo">
+            <h4><code>flex-wrap: nowrap</code></h4>
+            <div class="wrap1">
+                <div class="red">1</div>
+                <div class="green">2</div>
+                <div class="blue">3</div>
+            </div>
+        </div>
+        <div class="demo">
+            <h4><code>flex-wrap: wrap-reverse</code></h4>
+            <div class="wrap2">
+                <div class="red">1</div>
+                <div class="green">2</div>
+                <div class="blue">3</div>
+            </div>
+        </div>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@ @% }) %@

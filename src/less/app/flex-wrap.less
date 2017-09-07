@@ -1,0 +1,48 @@
+@import '../base.less';
+
+.demo {
+  width: 80%;
+
+  h4 {
+    padding: 10px 0;
+  }
+}
+
+.wrap,
+.wrap1,
+.wrap2 {
+  height: 150px;
+  font: 100 24px/100px sans-serif;
+  color: #fff;
+  text-align: center;
+  .flexbox();
+
+  div {
+    height: 50%;
+    width: 50%;
+  }
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap1 {
+  flex-wrap: nowrap;
+}
+
+.wrap2 {
+  flex-wrap: wrap-reverse;
+}
+
+.red {
+  background: orangered;
+}
+
+.green {
+  background: yellowgreen;
+}
+
+.blue {
+  background: steelblue;
+}

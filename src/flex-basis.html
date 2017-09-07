@@ -1,0 +1,33 @@
+@% extend('layout.art') %@
+<!--title-->
+@% block('title', function(){ %@ flex-basis 弹性布局 @% }) %@
+<!--head-->
+@% block('head', function(){ %@
+<link rel="stylesheet" type="text/css" href="css/flex-basis.css?v=@%=v%@" /> @% }) %@
+<!--header-->
+@% block('headerTitle', function(){ %@ flex-basis @% }) %@
+<!--content-->
+@% block('content', function(){ %@
+<!--aside-->
+@% include('aside.art', {active:5}) %@
+<div class="main">
+    <div class="wrapper">
+        <h2>flex-basis</h2>
+        <h4>弹性盒子伸缩</h4>
+        <p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
+        <ul class="container">
+            <li class="flex flex1">1: flex-basis test</li>
+            <li class="flex flex2">2: flex-basis test</li>
+            <li class="flex flex3">3: flex-basis test</li>
+            <li class="flex flex4">4: flex-basis test</li>
+            <li class="flex flex5">5: flex-basis test</li>
+        </ul>
+
+        <ul class="container">
+            <li class="flex flex6">6: flex-basis test</li>
+        </ul>
+    </div>
+</div>
+@% }) %@
+<!--js-->
+@% block('js', function(){ %@ @% }) %@
